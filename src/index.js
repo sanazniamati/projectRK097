@@ -3,10 +3,8 @@ import ReactDOM from "react-dom/client";
 import { Stage, Layer, Text, Rect } from "react-konva";
 
 const App = () => {
-  const [text, setText] = useState("");
   const [width, setWidth] = useState(100);
   const [height, setHeight] = useState(50);
-  const rectRef = useRef();
   const handelIncWidth = () => {
     setWidth(width + 15);
   };
@@ -34,7 +32,6 @@ const App = () => {
       </div>
       <Stage width={700} height={700}>
         <Layer>
-          <Text text={text} x={10} y={10} fontSize={24} fill={"black"} />
           <Rect
             x={20}
             y={100}
